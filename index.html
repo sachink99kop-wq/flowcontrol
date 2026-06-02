@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flow Control Valves — Sealing Success in Every Valve</title>
+    <title>Home — Flow Control Valves</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
@@ -65,6 +65,9 @@
         .hero-gradient {
             background: linear-gradient(135deg, #0b1a2e 0%, #0a3d7c 50%, #1a8fd1 100%);
         }
+        .page-header {
+            background: linear-gradient(135deg, #0b1a2e 0%, #0a3d7c 60%, #1a8fd1 100%);
+        }
         .section-gradient {
             background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
         }
@@ -79,12 +82,6 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
-        .procedure-step {
-            counter-increment: step;
-        }
-        .procedure-step::before {
-            content: counter(step);
-        }
         .tab-btn.active {
             background: linear-gradient(135deg, #0a3d7c, #1a8fd1);
             color: white;
@@ -95,19 +92,20 @@
         .timeline-line {
             background: linear-gradient(to bottom, #1a8fd1, #0a3d7c);
         }
+        .nav-active {
+            color: white !important;
+            background: rgba(255,255,255,0.1);
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
         ::-webkit-scrollbar-thumb { background: linear-gradient(#1a8fd1, #0a3d7c); border-radius: 4px; }
     </style>
 </head>
 <body class="font-body text-gray-800 overflow-x-hidden">
-
-    <!-- ============ NAVIGATION ============ -->
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="#home" class="flex items-center gap-3 group">
+                <a href="index.html" class="flex items-center gap-3 group">
                     <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/30 transition-shadow">
                         <i class="fas fa-valve text-white text-xl"></i>
                     </div>
@@ -116,51 +114,41 @@
                         <span class="text-xs text-accent-light tracking-[0.2em] uppercase">Valves</span>
                     </div>
                 </a>
-
-                <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-1">
-                    <a href="#home" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Home</a>
-                    <a href="#about" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">About</a>
-                    <a href="#services" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Services</a>
-                    <a href="#products" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Products</a>
-                    <a href="#repair" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Repair</a>
-                    <a href="#pumps" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Pumps</a>
-                    <a href="#manufacturing" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Manufacturing</a>
-                    <a href="#contact" class="ml-3 px-6 py-2.5 bg-gradient-to-r from-accent to-accent-light text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-accent/30 transition-all hover:scale-105">Contact Us</a>
+                    <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all nav-active">Home</a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">About</a>
+                    <a href="services.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Services</a>
+                    <a href="products.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Valves</a>
+                    <a href="repair.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Repair</a>
+                    <a href="pumps.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Pumps</a>
+                    <a href="manufacturing.html" class="nav-link px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Manufacturing</a>
+                    <a href="contact.html" class="ml-3 px-6 py-2.5 bg-gradient-to-r from-accent to-accent-light text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-accent/30 transition-all hover:scale-105">Contact Us</a>
                 </div>
-
-                <!-- Mobile menu button -->
                 <button id="mobile-menu-btn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all">
                     <i class="fas fa-bars text-xl" id="menu-icon"></i>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-primary-dark/95 nav-blur border-t border-white/10">
             <div class="px-4 py-4 space-y-1">
-                <a href="#home" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Home</a>
-                <a href="#about" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">About</a>
-                <a href="#services" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Services</a>
-                <a href="#products" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Products</a>
-                <a href="#repair" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Repair Procedures</a>
-                <a href="#pumps" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Pumps &amp; Gearbox</a>
-                <a href="#manufacturing" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Manufacturing</a>
-                <a href="#contact" class="block mx-4 mt-3 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white text-center font-semibold rounded-full">Contact Us</a>
+                <a href="index.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all nav-active">Home</a>
+                <a href="about.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">About</a>
+                <a href="services.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Services</a>
+                <a href="products.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Valves</a>
+                <a href="repair.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Repair</a>
+                <a href="pumps.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Pumps</a>
+                <a href="manufacturing.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Manufacturing</a>
+                <a href="contact.html" class="block mx-4 mt-3 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white text-center font-semibold rounded-full">Contact Us</a>
             </div>
         </div>
     </nav>
-
-    <!-- ============ HERO SECTION ============ -->
-    <section id="home" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <!-- Decorative elements -->
+    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
         <div class="absolute inset-0">
             <div class="absolute top-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
             <div class="absolute bottom-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full"></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full"></div>
         </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -169,98 +157,96 @@
                         <span class="text-white/80 text-sm">Established 2021 | Belgaum, Karnataka</span>
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6">
-                        <span class="text-accent-light">Sealing Success</span><br>
-                        in Every Valve
+                        <span class="text-accent-light">Sealing Success</span><br>in Every Valve
                     </h1>
-                    <p class="text-lg text-white/70 max-w-xl mb-8 leading-relaxed">
-                        The best solutions for your flow systems. Specialization in all types of Industrial Valve Repair &amp; Reconditioning with precision, reliability, and performance.
-                    </p>
+                    <p class="text-lg text-white/70 max-w-xl mb-8 leading-relaxed">The best solutions for your flow systems. Specialization in all types of Industrial Valve Repair &amp; Reconditioning with precision, reliability, and performance.</p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#services" class="group px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 transition-all hover:scale-105 flex items-center gap-2">
-                            Our Services
-                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                        <a href="#contact" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all hover:border-white/50">
-                            Get a Quote
-                        </a>
+                        <a href="services.html" class="group px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 transition-all hover:scale-105 flex items-center gap-2">Our Services <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="contact.html" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all hover:border-white/50">Get a Quote</a>
                     </div>
-
-                    <!-- Stats -->
                     <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
-                        <div>
-                            <div class="text-3xl font-bold text-white" id="counter-years">5+</div>
-                            <div class="text-white/50 text-sm mt-1">Years Experience</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-white" id="counter-clients">500+</div>
-                            <div class="text-white/50 text-sm mt-1">Clients Served</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-white" id="counter-projects">1000+</div>
-                            <div class="text-white/50 text-sm mt-1">Valves Repaired</div>
-                        </div>
+                        <div><div class="text-3xl font-bold text-white" id="counter-years">5+</div><div class="text-white/50 text-sm mt-1">Years Experience</div></div>
+                        <div><div class="text-3xl font-bold text-white" id="counter-clients">500+</div><div class="text-white/50 text-sm mt-1">Clients Served</div></div>
+                        <div><div class="text-3xl font-bold text-white" id="counter-projects">1000+</div><div class="text-white/50 text-sm mt-1">Valves Repaired</div></div>
                     </div>
                 </div>
-
-                <!-- Hero visual -->
                 <div class="hidden lg:flex justify-center items-center relative">
                     <div class="relative">
                         <div class="w-[420px] h-[420px] rounded-full border-2 border-white/10 flex items-center justify-center">
                             <div class="w-[320px] h-[320px] rounded-full border border-accent/30 flex items-center justify-center bg-white/5">
-                                <div class="w-[220px] h-[220px] rounded-full bg-gradient-to-br from-accent/20 to-primary/30 flex items-center justify-center pulse-glow">
-                                    <i class="fas fa-cogs text-7xl text-white/80"></i>
-                                </div>
+                                <div class="w-[220px] h-[220px] rounded-full bg-gradient-to-br from-accent/20 to-primary/30 flex items-center justify-center pulse-glow"><i class="fas fa-cogs text-7xl text-white/80"></i></div>
                             </div>
                         </div>
-                        <!-- Floating icons around the circle -->
-                        <div class="absolute top-4 right-8 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 0s;">
-                            <i class="fas fa-wrench text-2xl text-accent-light"></i>
-                        </div>
-                        <div class="absolute bottom-8 left-0 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 1s;">
-                            <i class="fas fa-industry text-2xl text-accent-light"></i>
-                        </div>
-                        <div class="absolute top-1/2 -right-4 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 2s;">
-                            <i class="fas fa-tachometer-alt text-2xl text-accent-light"></i>
-                        </div>
-                        <div class="absolute bottom-0 right-16 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 0.5s;">
-                            <i class="fas fa-shield-alt text-2xl text-accent-light"></i>
-                        </div>
+                        <div class="absolute top-4 right-8 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 0s;"><i class="fas fa-wrench text-2xl text-accent-light"></i></div>
+                        <div class="absolute bottom-8 left-0 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 1s;"><i class="fas fa-industry text-2xl text-accent-light"></i></div>
+                        <div class="absolute top-1/2 -right-4 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 2s;"><i class="fas fa-tachometer-alt text-2xl text-accent-light"></i></div>
+                        <div class="absolute bottom-0 right-16 bg-white/10 border border-white/20 rounded-2xl p-4 float-anim" style="animation-delay: 0.5s;"><i class="fas fa-shield-alt text-2xl text-accent-light"></i></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
             <span class="text-white/40 text-xs uppercase tracking-widest">Scroll</span>
             <i class="fas fa-chevron-down text-white/40"></i>
         </div>
     </section>
 
-    <!-- ============ ABOUT US ============ -->
-    <section id="about" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <!-- Quick overview cards -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll fade-up">
+                <h2 class="text-3xl font-heading font-bold text-dark mb-4">What We Offer</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="services.html" class="animate-on-scroll fade-up bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 text-white card-hover text-center group">
+                    <i class="fas fa-tools text-3xl text-accent-light mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Our Services</h3>
+                    <p class="text-white/60 text-sm">7 specialized valve services</p>
+                    <span class="inline-block mt-3 text-accent-light text-sm group-hover:translate-x-1 transition-transform">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="products.html" class="animate-on-scroll fade-up bg-gradient-to-br from-accent to-accent-light rounded-2xl p-6 text-white card-hover text-center group" style="transition-delay: 0.1s;">
+                    <i class="fas fa-cogs text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Valve Types</h3>
+                    <p class="text-white/80 text-sm">6 major valve categories</p>
+                    <span class="inline-block mt-3 text-white/80 text-sm group-hover:translate-x-1 transition-transform">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="pumps.html" class="animate-on-scroll fade-up bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 text-white card-hover text-center group" style="transition-delay: 0.2s;">
+                    <i class="fas fa-water text-3xl text-accent-light mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Pumps &amp; Gearbox</h3>
+                    <p class="text-white/60 text-sm">Complete maintenance solutions</p>
+                    <span class="inline-block mt-3 text-accent-light text-sm group-hover:translate-x-1 transition-transform">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="manufacturing.html" class="animate-on-scroll fade-up bg-gradient-to-br from-accent to-accent-light rounded-2xl p-6 text-white card-hover text-center group" style="transition-delay: 0.3s;">
+                    <i class="fas fa-industry text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Manufacturing</h3>
+                    <p class="text-white/80 text-sm">Precision component fabrication</p>
+                    <span class="inline-block mt-3 text-white/80 text-sm group-hover:translate-x-1 transition-transform">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT US PREVIEW ============ -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-white to-gray-50"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Left content -->
                 <div class="animate-on-scroll fade-left">
                     <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">About Us</span>
-                    <h2 class="text-4xl lg:text-5xl font-heading font-bold text-dark mb-6 leading-tight">
-                        Precision. Reliability.<br><span class="text-accent">Performance.</span>
-                    </h2>
-                    <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mb-8"></div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Established in 2021, Flow Control Valves is a fast-growing and trusted service provider delivering specialized valve maintenance solutions across critical industries including oil &amp; gas, pharmaceuticals, and power plants.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        We bring together technical expertise, precision engineering, and a commitment to excellence to ensure every valve operates at peak efficiency and safety. Our team of skilled professionals is dedicated to minimizing downtime, extending equipment life, and supporting uninterrupted operations.
-                    </p>
-                    <p class="text-gray-700 font-semibold italic border-l-4 border-accent pl-4">
-                        We don't just maintain valves — we optimize performance and protect your operations.
-                    </p>
+                    <h2 class="text-3xl lg:text-4xl font-heading font-bold text-dark mb-6 leading-tight">Trusted Partner for <span class="text-accent">Industrial Valve Solutions</span></h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-5">Established in 2021, Flow Control Valves is a fast-growing and trusted service provider delivering specialized valve maintenance solutions across critical industries including oil &amp; gas, pharmaceuticals, and power plants.</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">We bring together technical expertise, precision engineering, and a commitment to excellence to ensure every valve operates at peak efficiency and safety.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-check-double text-accent"></i></div><span class="text-sm font-medium text-dark">Precision Engineering</span></div>
+                        <div class="flex items-center gap-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-award text-accent"></i></div><span class="text-sm font-medium text-dark">Quality Certified</span></div>
+                        <div class="flex items-center gap-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-headset text-accent"></i></div><span class="text-sm font-medium text-dark">24/7 Emergency Support</span></div>
+                        <div class="flex items-center gap-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-truck text-accent"></i></div><span class="text-sm font-medium text-dark">On-site &amp; Off-site</span></div>
+                    </div>
+                    <a href="about.html" class="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/20 hover:shadow-xl hover:scale-105 transition-all">Learn More About Us <i class="fas fa-arrow-right"></i></a>
                 </div>
-
-                <!-- Right visual cards -->
                 <div class="animate-on-scroll fade-right">
                     <div class="grid grid-cols-2 gap-5">
                         <div class="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-6 text-white card-hover flex flex-col justify-center min-h-[140px]">
@@ -286,27 +272,181 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Mission & Vision -->
-            <div class="grid md:grid-cols-2 gap-8 mt-16 animate-on-scroll fade-up">
-                <!-- Mission -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover relative overflow-hidden">
+    <!-- ============ KEY SERVICES HIGHLIGHTS ============ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 animate-on-scroll fade-up">
+                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</span>
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold text-dark mb-4">Our Core Services</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-5"></div>
+                <p class="text-gray-600">End-to-end valve maintenance solutions — from inspection to commissioning.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="animate-on-scroll fade-up bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover group text-center" style="transition-delay:0.05s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300"><i class="fas fa-search-plus text-2xl text-accent group-hover:text-white transition-colors"></i></div>
+                    <h3 class="font-bold text-dark mb-2">Inspection &amp; Diagnostics</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Visual, functional, and advanced testing to identify issues.</p>
+                </div>
+                <div class="animate-on-scroll fade-up bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover group text-center" style="transition-delay:0.1s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300"><i class="fas fa-wrench text-2xl text-accent group-hover:text-white transition-colors"></i></div>
+                    <h3 class="font-bold text-dark mb-2">Repair &amp; Overhauling</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Complete disassembly, repair, and reassembly of all valve types.</p>
+                </div>
+                <div class="animate-on-scroll fade-up bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover group text-center" style="transition-delay:0.15s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300"><i class="fas fa-tachometer-alt text-2xl text-accent group-hover:text-white transition-colors"></i></div>
+                    <h3 class="font-bold text-dark mb-2">Pressure Testing</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Hydrostatic and leakage testing to meet industry standards.</p>
+                </div>
+                <div class="animate-on-scroll fade-up bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover group text-center" style="transition-delay:0.2s;">
+                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300"><i class="fas fa-exclamation-triangle text-2xl text-red-500 group-hover:text-white transition-colors"></i></div>
+                    <h3 class="font-bold text-dark mb-2">Emergency Support</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">24/7 rapid response for critical valve failures.</p>
+                </div>
+            </div>
+            <div class="text-center animate-on-scroll fade-up">
+                <a href="services.html" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary transition-colors">View All 7 Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INDUSTRIES WE SERVE ============ -->
+    <section class="py-20 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, rgba(26,143,209,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(10,61,124,0.3) 0%, transparent 50%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-2xl mx-auto mb-14 animate-on-scroll fade-up">
+                <span class="inline-block text-accent-light font-semibold text-sm uppercase tracking-widest mb-3">Industries</span>
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">Industries We Serve</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-5"></div>
+                <p class="text-gray-400">Our expertise supports critical operations across diverse sectors.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+                <div class="animate-on-scroll scale-in bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+                    <i class="fas fa-oil-can text-3xl text-accent-light mb-3"></i>
+                    <h4 class="text-white font-semibold text-sm">Oil &amp; Gas</h4>
+                </div>
+                <div class="animate-on-scroll scale-in bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-accent/30 transition-all duration-300" style="transition-delay:0.05s;">
+                    <i class="fas fa-bolt text-3xl text-accent-light mb-3"></i>
+                    <h4 class="text-white font-semibold text-sm">Power Plants</h4>
+                </div>
+                <div class="animate-on-scroll scale-in bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-accent/30 transition-all duration-300" style="transition-delay:0.1s;">
+                    <i class="fas fa-flask text-3xl text-accent-light mb-3"></i>
+                    <h4 class="text-white font-semibold text-sm">Pharmaceuticals</h4>
+                </div>
+                <div class="animate-on-scroll scale-in bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-accent/30 transition-all duration-300" style="transition-delay:0.15s;">
+                    <i class="fas fa-tint text-3xl text-accent-light mb-3"></i>
+                    <h4 class="text-white font-semibold text-sm">Water Treatment</h4>
+                </div>
+                <div class="animate-on-scroll scale-in bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-accent/30 transition-all duration-300" style="transition-delay:0.2s;">
+                    <i class="fas fa-hard-hat text-3xl text-accent-light mb-3"></i>
+                    <h4 class="text-white font-semibold text-sm">Manufacturing</h4>
+                </div>
+                <div class="animate-on-scroll scale-in bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-accent/30 transition-all duration-300" style="transition-delay:0.25s;">
+                    <i class="fas fa-atom text-3xl text-accent-light mb-3"></i>
+                    <h4 class="text-white font-semibold text-sm">Chemical Plants</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ REPAIR PROCESS PREVIEW ============ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 animate-on-scroll fade-up">
+                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Process</span>
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold text-dark mb-4">How We Repair Your Valves</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-5"></div>
+                <p class="text-gray-600">Our systematic 9-step process ensures every valve is restored to peak performance.</p>
+            </div>
+            <div class="grid sm:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
+                <div class="animate-on-scroll fade-up text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform">1</div>
+                    <h4 class="font-bold text-dark text-sm mb-1">Inspection</h4>
+                    <p class="text-gray-400 text-xs">Identify wear &amp; issues</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center group" style="transition-delay:0.05s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform">2</div>
+                    <h4 class="font-bold text-dark text-sm mb-1">Dismantling</h4>
+                    <p class="text-gray-400 text-xs">Careful disassembly</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center group" style="transition-delay:0.1s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform">3</div>
+                    <h4 class="font-bold text-dark text-sm mb-1">Repair</h4>
+                    <p class="text-gray-400 text-xs">Machining &amp; refurbishment</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center group" style="transition-delay:0.15s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform">4</div>
+                    <h4 class="font-bold text-dark text-sm mb-1">Testing</h4>
+                    <p class="text-gray-400 text-xs">Pressure &amp; leakage tests</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center group" style="transition-delay:0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 shadow-lg shadow-green-500/20 group-hover:scale-110 transition-transform"><i class="fas fa-check"></i></div>
+                    <h4 class="font-bold text-dark text-sm mb-1">Dispatch</h4>
+                    <p class="text-gray-400 text-xs">Certified &amp; delivered</p>
+                </div>
+            </div>
+            <div class="text-center animate-on-scroll fade-up">
+                <a href="repair.html" class="inline-flex items-center gap-2 px-7 py-3 border-2 border-accent text-accent font-semibold rounded-full hover:bg-accent hover:text-white transition-all">View Full 9-Step Process <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-primary relative overflow-hidden">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 30% 70%, rgba(26,143,209,0.2) 0%, transparent 50%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12 animate-on-scroll fade-up">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">Why Choose Flow Control Valves?</h2>
+                <div class="w-20 h-1 bg-accent-light rounded-full mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
+                    <i class="fas fa-cog text-3xl text-accent-light mb-4"></i>
+                    <h4 class="text-white font-semibold text-sm">Advanced Machinery</h4>
+                    <p class="text-gray-400 text-xs mt-2">CNC, lathe, milling &amp; lapping equipment</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay:0.1s;">
+                    <i class="fas fa-user-tie text-3xl text-accent-light mb-4"></i>
+                    <h4 class="text-white font-semibold text-sm">Skilled Technicians</h4>
+                    <p class="text-gray-400 text-xs mt-2">Expert professionals with years of experience</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay:0.2s;">
+                    <i class="fas fa-rupee-sign text-3xl text-accent-light mb-4"></i>
+                    <h4 class="text-white font-semibold text-sm">Cost-effective</h4>
+                    <p class="text-gray-400 text-xs mt-2">Affordable refurbishment solutions</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay:0.3s;">
+                    <i class="fas fa-clock text-3xl text-accent-light mb-4"></i>
+                    <h4 class="text-white font-semibold text-sm">Quick Turnaround</h4>
+                    <p class="text-gray-400 text-xs mt-2">Fast delivery without compromising quality</p>
+                </div>
+                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay:0.4s;">
+                    <i class="fas fa-certificate text-3xl text-accent-light mb-4"></i>
+                    <h4 class="text-white font-semibold text-sm">Industry Standards</h4>
+                    <p class="text-gray-400 text-xs mt-2">Full compliance with all standards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MISSION & VISION ============ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="animate-on-scroll fade-left bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center shadow-lg shadow-accent/20">
-                            <i class="fas fa-bullseye text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center shadow-lg shadow-accent/20"><i class="fas fa-bullseye text-2xl text-white"></i></div>
                         <h3 class="text-xl font-heading font-bold text-dark">Our Mission</h3>
                     </div>
                     <p class="text-gray-600 leading-relaxed text-sm">To deliver high-quality, reliable valve maintenance solutions that enhance operational efficiency, ensure safety, and minimize downtime across industries.</p>
                 </div>
-                <!-- Vision -->
-                <div class="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 shadow-lg card-hover relative overflow-hidden">
+                <div class="animate-on-scroll fade-right bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 shadow-lg card-hover relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-eye text-2xl text-accent-light"></i>
-                        </div>
+                        <div class="w-14 h-14 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center"><i class="fas fa-eye text-2xl text-accent-light"></i></div>
                         <h3 class="text-xl font-heading font-bold text-white">Our Vision</h3>
                     </div>
                     <p class="text-white/70 leading-relaxed text-sm">To be recognized as a premier and trusted leader in the valve servicing industry, setting benchmarks in quality, technology, and customer satisfaction while building enduring partnerships across sectors.</p>
@@ -315,807 +455,28 @@
         </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
-    <section id="services" class="py-24 section-gradient relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section header -->
-            <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll fade-up">
-                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Do</span>
-                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-dark mb-4">Our Services</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-6"></div>
-                <p class="text-gray-600">We offer end-to-end solutions for all types of industrial valves.</p>
-            </div>
-
-            <!-- Services grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group" style="transition-delay: 0.1s;">
-                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-search-plus text-2xl text-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark mb-2">Valve Inspection &amp; Diagnostics</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Thorough inspection to identify wear, corrosion, leakage, or operational issues using visual, functional, and advanced testing methods.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group" style="transition-delay: 0.2s;">
-                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-tools text-2xl text-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark mb-2">Preventive &amp; Breakdown Maintenance</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Scheduled and emergency maintenance services to prevent failures and ensure continuous operations with minimal downtime.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group" style="transition-delay: 0.3s;">
-                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-wrench text-2xl text-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark mb-2">Valve Repair &amp; Overhauling</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Complete disassembly, repair, and reassembly of valves using proper tools and techniques to restore full performance.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group" style="transition-delay: 0.4s;">
-                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-tachometer-alt text-2xl text-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark mb-2">Pressure Testing &amp; Calibration</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Hydrostatic pressure testing, leakage testing, and functional operation testing to meet industry standards.</p>
-                </div>
-                <!-- Service 5 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group" style="transition-delay: 0.15s;">
-                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-sync-alt text-2xl text-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark mb-2">Valve Refurbishment &amp; Reconditioning</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Damaged parts repaired or replaced to restore valve performance through lapping, machining, welding, and rubber lining.</p>
-                </div>
-                <!-- Service 6 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group" style="transition-delay: 0.25s;">
-                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-map-marker-alt text-2xl text-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark mb-2">On-site &amp; Off-site Servicing</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Flexible service options — we come to your facility or handle repairs at our workshop, whatever suits your needs.</p>
-                </div>
-                <!-- Service 7 -->
-                <div class="animate-on-scroll fade-up bg-white rounded-2xl p-7 shadow-sm border border-gray-100 card-hover group col-span-1 md:col-span-2 lg:col-span-2" style="transition-delay: 0.35s;">
-                    <div class="flex items-start gap-5">
-                        <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300">
-                            <i class="fas fa-exclamation-triangle text-2xl text-red-500 group-hover:text-white transition-colors"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-dark mb-2">Shutdown &amp; Emergency Support</h3>
-                            <p class="text-gray-500 text-sm leading-relaxed">Rapid response emergency support and planned shutdown maintenance to keep your operations running safely. Available 24/7 for critical valve emergencies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ PRODUCTS / VALVE TYPES ============ -->
-    <section id="products" class="py-24 bg-dark relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 20% 50%, rgba(26,143,209,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(10,61,124,0.3) 0%, transparent 50%);"></div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <!-- Section header -->
-            <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll fade-up">
-                <span class="inline-block text-accent-light font-semibold text-sm uppercase tracking-widest mb-3">Our Expertise</span>
-                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-white mb-4">Valve Types We Service</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-6"></div>
-                <p class="text-gray-400">We specialize in repair and reconditioning of all major industrial valve types.</p>
-            </div>
-
-            <!-- Valve types grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Gate Valves -->
-                <div class="animate-on-scroll scale-in group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:border-accent/30">
-                    <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-primary/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-door-open text-4xl text-accent-light"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Gate Valves</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Linear motion valves used to start or stop fluid flow. Ideal for fully open or fully closed positions in pipelines.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">On/Off Control</span>
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Low Pressure Drop</span>
-                    </div>
-                </div>
-
-                <!-- Ball Valves -->
-                <div class="animate-on-scroll scale-in group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:border-accent/30" style="transition-delay: 0.1s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-primary/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-circle text-4xl text-accent-light"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Ball Valves</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Quarter-turn valves with a spherical closure for excellent shutoff capability. Widely used in oil &amp; gas applications.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Quick Operation</span>
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Tight Seal</span>
-                    </div>
-                </div>
-
-                <!-- Butterfly Valves -->
-                <div class="animate-on-scroll scale-in group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:border-accent/30" style="transition-delay: 0.2s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-primary/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-fan text-4xl text-accent-light"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Butterfly Valves</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Compact quarter-turn valves with a rotating disc for flow regulation. Ideal for large-diameter pipelines and HVAC systems.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Compact</span>
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Lightweight</span>
-                    </div>
-                </div>
-
-                <!-- Globe Valves -->
-                <div class="animate-on-scroll scale-in group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:border-accent/30" style="transition-delay: 0.1s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-primary/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-globe text-4xl text-accent-light"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Globe Valves</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Linear motion valves for precise flow regulation and throttling. Excellent for controlling flow rates in process systems.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Throttling</span>
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Flow Control</span>
-                    </div>
-                </div>
-
-                <!-- Safety & Relief Valves -->
-                <div class="animate-on-scroll scale-in group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:border-accent/30" style="transition-delay: 0.2s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-shield-alt text-4xl text-red-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Safety &amp; Relief Valves</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Pressure-relief devices that protect equipment from overpressure. Critical for safety in boilers, vessels, and pipelines.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs bg-red-500/10 text-red-400 px-3 py-1 rounded-full">Safety Critical</span>
-                        <span class="text-xs bg-red-500/10 text-red-400 px-3 py-1 rounded-full">Overpressure</span>
-                    </div>
-                </div>
-
-                <!-- Knife Edge Valves -->
-                <div class="animate-on-scroll scale-in group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:border-accent/30" style="transition-delay: 0.3s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-primary/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-cut text-4xl text-accent-light"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Knife Edge Valves</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Designed for handling slurries, powders, and viscous fluids. The sharp edge cuts through media for tight shut-off.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Slurry</span>
-                        <span class="text-xs bg-accent/10 text-accent-light px-3 py-1 rounded-full">Heavy Duty</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ REPAIR PROCEDURES ============ -->
-    <section id="repair" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section header -->
-            <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll fade-up">
-                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Process</span>
-                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-dark mb-4">Industrial Valve Repair Procedures</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-6"></div>
-                <p class="text-gray-600">Our systematic 9-step repair process ensures every valve is restored to peak performance.</p>
-            </div>
-
-            <!-- Timeline -->
-            <div class="relative max-w-4xl mx-auto">
-                <!-- Vertical line -->
-                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 timeline-line transform -translate-x-1/2"></div>
-
-                <!-- Step 1 -->
-                <div class="animate-on-scroll fade-left flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold text-dark">Initial Inspection &amp; Assessment</h3>
-                        <p class="text-gray-500 text-sm mt-2">Every valve undergoes a thorough inspection to identify wear, corrosion, leakage, or operational issues through visual inspection, functional testing, and identification of damaged components.</p>
-                    </div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">1</div>
-                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="animate-on-scroll fade-right flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">2</div>
-                    <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                        <h3 class="text-xl font-bold text-dark">Valve Dismantling</h3>
-                        <p class="text-gray-500 text-sm mt-2">The valve is carefully disassembled using proper tools and techniques to avoid further damage. Safe removal from pipeline, marking of components for correct reassembly, and controlled dismantling process.</p>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="animate-on-scroll fade-left flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold text-dark">Cleaning &amp; Surface Preparation</h3>
-                        <p class="text-gray-500 text-sm mt-2">All parts are cleaned to remove deposits, rust, and old sealing materials through chemical cleaning/degreasing, sandblasting or wire brushing, and surface preparation for inspection.</p>
-                    </div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">3</div>
-                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="animate-on-scroll fade-right flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">4</div>
-                    <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                        <h3 class="text-xl font-bold text-dark">Detailed Component Inspection</h3>
-                        <p class="text-gray-500 text-sm mt-2">Each component is checked for defects and dimensional accuracy. Seat and sealing surface inspection, stem, disc, and body evaluation, and measurement against standards.</p>
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="animate-on-scroll fade-left flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold text-dark">Repair &amp; Refurbishment</h3>
-                        <p class="text-gray-500 text-sm mt-2">Damaged parts are repaired or replaced to restore valve performance. Lapping of sealing surfaces, machining (lathe, milling, drilling), welding and metal build-up, and rubber lining / seat replacement.</p>
-                    </div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">5</div>
-                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
-                </div>
-
-                <!-- Step 6 -->
-                <div class="animate-on-scroll fade-right flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">6</div>
-                    <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                        <h3 class="text-xl font-bold text-dark">Reassembly</h3>
-                        <p class="text-gray-500 text-sm mt-2">The valve is reassembled with precision to ensure proper alignment and sealing. Use of new gaskets and seals, torque-controlled tightening, and alignment verification.</p>
-                    </div>
-                </div>
-
-                <!-- Step 7 -->
-                <div class="animate-on-scroll fade-left flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold text-dark">Testing &amp; Quality Assurance</h3>
-                        <p class="text-gray-500 text-sm mt-2">Each valve is tested to meet industry standards and ensure reliability through hydrostatic pressure testing, leakage testing, and functional operation testing.</p>
-                    </div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">7</div>
-                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
-                </div>
-
-                <!-- Step 8 -->
-                <div class="animate-on-scroll fade-right flex flex-col md:flex-row items-center mb-12 md:mb-16">
-                    <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-accent/30 flex-shrink-0">8</div>
-                    <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                        <h3 class="text-xl font-bold text-dark">Painting &amp; Finishing</h3>
-                        <p class="text-gray-500 text-sm mt-2">Final finishing improves durability and appearance with anti-corrosion coating, industrial-grade painting, and tagging and documentation.</p>
-                    </div>
-                </div>
-
-                <!-- Step 9 -->
-                <div class="animate-on-scroll fade-left flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold text-dark">Final Inspection &amp; Dispatch</h3>
-                        <p class="text-gray-500 text-sm mt-2">Before delivery, the valve undergoes final checks and proper packaging. Quality certification, documentation report, and safe packing for transport.</p>
-                    </div>
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg z-10 shadow-lg shadow-green-500/30 flex-shrink-0">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ WHY CHOOSE US ============ -->
-    <section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-primary relative overflow-hidden">
+    <!-- ============ CTA BANNER ============ -->
+    <section class="py-16 hero-gradient relative overflow-hidden">
         <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 30% 70%, rgba(26,143,209,0.2) 0%, transparent 50%);"></div>
+            <div class="absolute top-0 right-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-56 h-56 bg-primary/20 rounded-full blur-3xl"></div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center mb-12 animate-on-scroll fade-up">
-                <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">Why Choose Our Valve Repair Services?</h2>
-                <div class="w-20 h-1 bg-accent-light rounded-full mx-auto"></div>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
-                    <i class="fas fa-cog text-3xl text-accent-light mb-4"></i>
-                    <h4 class="text-white font-semibold text-sm">Advanced Machinery</h4>
-                    <p class="text-gray-400 text-xs mt-2">Lathe, milling, lapping &amp; testing equipment</p>
-                </div>
-                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay: 0.1s;">
-                    <i class="fas fa-user-tie text-3xl text-accent-light mb-4"></i>
-                    <h4 class="text-white font-semibold text-sm">Skilled Technicians</h4>
-                    <p class="text-gray-400 text-xs mt-2">Expert professionals with years of experience</p>
-                </div>
-                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay: 0.2s;">
-                    <i class="fas fa-rupee-sign text-3xl text-accent-light mb-4"></i>
-                    <h4 class="text-white font-semibold text-sm">Cost-effective</h4>
-                    <p class="text-gray-400 text-xs mt-2">Affordable refurbishment solutions</p>
-                </div>
-                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay: 0.3s;">
-                    <i class="fas fa-clock text-3xl text-accent-light mb-4"></i>
-                    <h4 class="text-white font-semibold text-sm">Quick Turnaround</h4>
-                    <p class="text-gray-400 text-xs mt-2">Fast delivery without compromising quality</p>
-                </div>
-                <div class="animate-on-scroll fade-up text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all" style="transition-delay: 0.4s;">
-                    <i class="fas fa-certificate text-3xl text-accent-light mb-4"></i>
-                    <h4 class="text-white font-semibold text-sm">Industry Standards</h4>
-                    <p class="text-gray-400 text-xs mt-2">Compliance with all industry standards</p>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <div class="animate-on-scroll fade-up">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">Ready to Get Your Valves Serviced?</h2>
+                <p class="text-white/60 mb-8 max-w-2xl mx-auto">Whether you need emergency repair, scheduled maintenance, or a complete overhaul — our team is ready to help. Contact us today for a free consultation.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/30 hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2"><i class="fas fa-paper-plane"></i> Get a Free Quote</a>
+                    <a href="tel:+919538110661" class="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all hover:border-white/50 flex items-center gap-2"><i class="fas fa-phone-alt"></i> Call +91 9538110661</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ PUMP & GEARBOX MAINTENANCE ============ -->
-    <section id="pumps" class="py-24 section-gradient relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
-                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Maintenance Services</span>
-                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-dark mb-4">Pump &amp; Gearbox Maintenance</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-6"></div>
-                <p class="text-gray-600">We deliver comprehensive maintenance and refurbishment services for all types of industrial pumps, ensuring optimal performance, efficiency, and reliability across critical operations. Our expertise supports industries such as oil &amp; gas, power plants, pharmaceuticals, water treatment, and manufacturing.</p>
-            </div>
-
-            <!-- Product showcase -->
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="animate-on-scroll scale-in text-center bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover">
-                    <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
-                        <i class="fas fa-water text-4xl text-accent"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark">Centrifugal Pumps</h3>
-                    <p class="text-gray-500 text-sm mt-2">Complete pump maintenance from inspection to commissioning</p>
-                </div>
-                <div class="animate-on-scroll scale-in text-center bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover" style="transition-delay: 0.1s;">
-                    <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
-                        <i class="fas fa-cogs text-4xl text-accent"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark">Gear Box</h3>
-                    <p class="text-gray-500 text-sm mt-2">Gearbox inspection, overhaul, and alignment services</p>
-                </div>
-                <div class="animate-on-scroll scale-in text-center bg-white rounded-2xl p-8 shadow-sm border border-gray-100 card-hover" style="transition-delay: 0.2s;">
-                    <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
-                        <i class="fas fa-tools text-4xl text-accent"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-dark">Disassembled Gear Box</h3>
-                    <p class="text-gray-500 text-sm mt-2">Complete disassembly, repair, and reassembly</p>
-                </div>
-            </div>
-
-            <!-- Tabbed procedure -->
-            <div class="animate-on-scroll fade-up bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden">
-                <div class="p-6 bg-gray-50 border-b border-gray-100">
-                    <h3 class="text-xl font-bold text-dark mb-4">Maintenance Procedure</h3>
-                    <div class="flex flex-wrap gap-2" id="pump-tabs">
-                        <button class="tab-btn active px-4 py-2 rounded-full text-sm font-medium transition-all" data-tab="pump-tab-1">Pre-Maintenance</button>
-                        <button class="tab-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all" data-tab="pump-tab-2">Inspection</button>
-                        <button class="tab-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all" data-tab="pump-tab-3">Disassembly &amp; Cleaning</button>
-                        <button class="tab-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all" data-tab="pump-tab-4">Repair &amp; Reassembly</button>
-                        <button class="tab-btn px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all" data-tab="pump-tab-5">Testing</button>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div id="pump-tab-1" class="tab-content active">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <span class="text-accent font-bold text-lg">1</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark text-lg mb-3">Pre-Maintenance Checks</h4>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Isolate equipment and follow LOTO (Lockout/Tagout)</li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Ensure system is depressurized and drained</li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Wear proper PPE (gloves, helmet, safety shoes)</li>
-                                    <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Review previous maintenance records</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pump-tab-2" class="tab-content">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <span class="text-accent font-bold text-lg">2</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark text-lg mb-3">Visual Inspection</h4>
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <h5 class="font-semibold text-dark mb-2">Pump Inspection</h5>
-                                        <ul class="space-y-2 text-gray-600 text-sm">
-                                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Check for leakage, vibration, noise</li>
-                                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Inspect seals, coupling, and piping connections</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-semibold text-dark mb-2">Gearbox Inspection</h5>
-                                        <ul class="space-y-2 text-gray-600 text-sm">
-                                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Check oil level and condition</li>
-                                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Inspect for overheating, abnormal sound, leakage</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pump-tab-3" class="tab-content">
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <span class="text-accent font-bold text-lg">3</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-lg mb-2">Disassembly</h4>
-                                    <ul class="space-y-2 text-gray-600 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Mark parts for correct reassembly</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Remove casing, shaft, bearings, seals carefully</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Drain oil (gearbox) and fluid (pump)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <span class="text-accent font-bold text-lg">4</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-lg mb-2">Cleaning</h4>
-                                    <ul class="space-y-2 text-gray-600 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Clean all components using solvent/degreaser</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Remove dirt, sludge, and deposits</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Dry using compressed air</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pump-tab-4" class="tab-content">
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <span class="text-accent font-bold text-lg">5</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-lg mb-2">Repair / Replacement</h4>
-                                    <ul class="space-y-2 text-gray-600 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Replace damaged bearings, seals, gaskets, O-ring</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Repair or replace worn gears/impeller</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Ensure correct tolerances and fits</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <span class="text-accent font-bold text-lg">6</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-lg mb-2">Reassembly</h4>
-                                    <ul class="space-y-2 text-gray-600 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Reassemble as per markings and alignment</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Apply proper lubrication</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Tighten bolts to recommended torque</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="pump-tab-5" class="tab-content">
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <span class="text-accent font-bold text-lg">7</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-lg mb-2">Alignment &amp; Lubrication</h4>
-                                    <ul class="space-y-2 text-gray-600 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Align pump with motor (dial gauge/laser)</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Fill gearbox with recommended oil</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent mt-0.5"></i> Ensure correct coupling alignment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <span class="text-green-600 font-bold text-lg">8</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-lg mb-2">Testing &amp; Commissioning</h4>
-                                    <ul class="space-y-2 text-gray-600 text-sm">
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i> Perform no-load trial run</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i> Check vibration, noise, temperature</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i> Verify flow, pressure (pump)</li>
-                                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i> Ensure no oil or fluid leakage</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ MANUFACTURING SERVICES ============ -->
-    <section id="manufacturing" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
-                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Manufacturing</span>
-                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-dark mb-4">Industrial Component Repair &amp; Manufacturing</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-6"></div>
-                <p class="text-gray-600">Precision Engineering. Reliable Performance. We specialize in high-quality repair, refurbishment, and manufacturing of industrial components, delivering durable solutions for critical applications across industries such as oil &amp; gas, power plants, pharmaceuticals, and heavy engineering.</p>
-            </div>
-
-            <!-- Core Services -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div class="animate-on-scroll fade-up bg-gradient-to-br from-gray-50 to-white rounded-2xl p-7 border border-gray-100 card-hover group">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                            <i class="fas fa-drafting-compass text-xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h3 class="font-bold text-dark">Shaft Repair &amp; Machining</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-500 text-sm">
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Precision machining of new shafts as per drawing/specification</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Repair of worn-out shafts using metal build-up and re-machining</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Straightening and alignment correction</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Keyway cutting, slotting, and surface finishing</li>
-                    </ul>
-                </div>
-                <div class="animate-on-scroll fade-up bg-gradient-to-br from-gray-50 to-white rounded-2xl p-7 border border-gray-100 card-hover group" style="transition-delay: 0.1s;">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                            <i class="fas fa-screwdriver-wrench text-xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h3 class="font-bold text-dark">Threading &amp; Machined Components</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-500 text-sm">
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Internal and external thread cutting (metric, BSP, NPT, ACME, etc.)</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> CNC &amp; conventional machining for custom components</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Studs, bolts, nuts, and special fasteners manufacturing</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> High accuracy and surface finish ensured</li>
-                    </ul>
-                </div>
-                <div class="animate-on-scroll fade-up bg-gradient-to-br from-gray-50 to-white rounded-2xl p-7 border border-gray-100 card-hover group" style="transition-delay: 0.2s;">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                            <i class="fas fa-industry text-xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h3 class="font-bold text-dark">Valve Components Manufacturing</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-500 text-sm">
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Manufacturing of valve parts</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Precision tolerance for leak-proof and high-pressure applications</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Materials: SS, CS, Alloy Steel, Bronze, Duplex, etc.</li>
-                    </ul>
-                </div>
-                <div class="animate-on-scroll fade-up bg-gradient-to-br from-gray-50 to-white rounded-2xl p-7 border border-gray-100 card-hover group" style="transition-delay: 0.1s;">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                            <i class="fas fa-recycle text-xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h3 class="font-bold text-dark">Component Refurbishment</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-500 text-sm">
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Restoration of damaged or worn components</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Hard facing, grinding, and polishing</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Dimensional correction and tolerance recovery</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-accent mt-0.5"></i> Cost-effective alternative to replacement</li>
-                    </ul>
-                </div>
-                <div class="animate-on-scroll fade-up bg-gradient-to-br from-gray-50 to-white rounded-2xl p-7 border border-gray-100 card-hover group col-span-1 md:col-span-2 lg:col-span-2" style="transition-delay: 0.2s;">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                            <i class="fas fa-microscope text-xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h3 class="font-bold text-dark">Our Capabilities</h3>
-                    </div>
-                    <div class="grid sm:grid-cols-2 gap-3 text-gray-500 text-sm">
-                        <div class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Advanced machining (CNC / Lathe / Milling)</div>
-                        <div class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Reverse engineering &amp; drawing development</div>
-                        <div class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Handling small to heavy industrial components</div>
-                        <div class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Strict quality inspection at every stage</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ RUBBER MOULDING & FABRICATED VALVES ============ -->
-    <section class="py-24 bg-dark relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 70% 30%, rgba(26,143,209,0.3) 0%, transparent 50%);"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Rubber Moulding -->
-                <div class="animate-on-scroll fade-left">
-                    <span class="inline-block text-accent-light font-semibold text-sm uppercase tracking-widest mb-3">Rubber Solutions</span>
-                    <h2 class="text-3xl font-heading font-bold text-white mb-6">Rubber Moulding Machine for Valve O-Ring Manufacturing</h2>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Rubber moulding machines are specialized industrial systems designed to produce high-precision O-rings and sealing components used in valves, pumps, pipelines, and critical industrial equipment. These machines transform raw elastomer materials into durable, leak-proof seals through controlled heat, pressure, and moulding processes.</p>
-
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="text-white font-semibold mb-3">Machine Components</h4>
-                            <ul class="space-y-2 text-gray-400 text-sm">
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> O-rings and sealing rings</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Gaskets (flat, spiral, custom shapes)</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Oil seals and mechanical seals</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Rubber bushes and dampers</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Valve seats and liners</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Rubber rollers and bellows</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-semibold mb-3">Valve Industry Components</h4>
-                            <ul class="space-y-2 text-gray-400 text-sm">
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Valve seats (soft/hard seated)</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> PTFE / rubber lined sleeves</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> O-rings and sealing kits</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Gland packing components</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-accent text-[6px] mt-2"></i> Rubber disc and seat rings</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fabricated Valves -->
-                <div class="animate-on-scroll fade-right">
-                    <span class="inline-block text-accent-light font-semibold text-sm uppercase tracking-widest mb-3">Fabrication</span>
-                    <h2 class="text-3xl font-heading font-bold text-white mb-6">Fabricated Straight &amp; Angle Valves</h2>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Our fabricated valves are engineered for durability, precision, and reliable flow control in demanding industrial applications. We manufacture both straight-through valves and angle valves using high-quality raw materials and advanced fabrication techniques.</p>
-
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6">
-                        <h4 class="text-white font-semibold mb-3"><i class="fas fa-pencil-ruler text-accent mr-2"></i> Design &amp; Engineering</h4>
-                        <ul class="space-y-2 text-gray-400 text-sm">
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Designs as per client requirements and international standards</li>
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Flow optimization for minimum pressure drop</li>
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Suitable for high-pressure and high-temperature applications</li>
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-accent mt-0.5"></i> Available in various sizes and pressure ratings</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-                        <h4 class="text-white font-semibold mb-3"><i class="fas fa-layer-group text-accent mr-2"></i> Material Selection</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-accent/10 text-accent-light text-xs px-3 py-1.5 rounded-full">Carbon Steel (A216)</span>
-                            <span class="bg-accent/10 text-accent-light text-xs px-3 py-1.5 rounded-full">SS Steel (304/316)</span>
-                            <span class="bg-accent/10 text-accent-light text-xs px-3 py-1.5 rounded-full">CI Steel (SS316)</span>
-                            <span class="bg-accent/10 text-accent-light text-xs px-3 py-1.5 rounded-full">Alloy Steel</span>
-                            <span class="bg-accent/10 text-accent-light text-xs px-3 py-1.5 rounded-full">Special materials on request</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll fade-up">
-                <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Get in Touch</span>
-                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-dark mb-4">Contact Us</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full mx-auto mb-6"></div>
-                <p class="text-gray-600">Ready to get your valves serviced? Reach out to us for a consultation or quote.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Contact Info Cards -->
-                <div class="space-y-3">
-                    <div class="animate-on-scroll fade-left bg-gradient-to-br from-primary to-primary-dark rounded-xl p-5 text-white card-hover">
-                        <div class="flex items-center gap-3 mb-2">
-                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-lg text-accent-light"></i>
-                            </div>
-                            <h3 class="font-bold text-base">Our Location</h3>
-                        </div>
-                        <p class="text-white/70 text-sm leading-snug pl-[52px]">Plot No. 90/A, Sy No. 658/18/1B/1B, Tiny Industrial Estate Udyambag, Belgaum - 590008, Karnataka</p>
-                    </div>
-
-                    <div class="animate-on-scroll fade-left bg-gray-50 rounded-xl p-4 border border-gray-100 card-hover" style="transition-delay: 0.1s;">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone-alt text-lg text-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-dark text-sm">Call Us</h3>
-                                <p class="text-accent font-semibold text-sm">+91 9538110661</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="animate-on-scroll fade-left bg-gray-50 rounded-xl p-4 border border-gray-100 card-hover" style="transition-delay: 0.2s;">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-envelope text-lg text-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-dark text-sm">Email Us</h3>
-                                <p class="text-accent font-semibold text-sm">flowcontrolvalves14@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="animate-on-scroll fade-left bg-green-50 rounded-xl p-4 border border-green-100 card-hover" style="transition-delay: 0.3s;">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fab fa-whatsapp text-xl text-green-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-dark text-sm">WhatsApp</h3>
-                                <p class="text-green-600 font-semibold text-sm">+91 9538110661</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="animate-on-scroll fade-left bg-gray-50 rounded-xl p-4 border border-gray-100" style="transition-delay: 0.35s;">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-file-invoice text-lg text-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-dark text-sm">GSTIN</h3>
-                                <p class="text-gray-600 font-mono text-sm">29GWWPS0591C1ZS</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="lg:col-span-2 animate-on-scroll fade-right">
-                    <form id="contact-form" class="bg-gray-50 rounded-3xl p-8 lg:p-10 border border-gray-100">
-                        <h3 class="text-2xl font-bold text-dark mb-6">Send us a Message</h3>
-                        <div class="grid sm:grid-cols-2 gap-5 mb-5">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" placeholder="Your name">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" placeholder="+91 XXXXX XXXXX">
-                            </div>
-                        </div>
-                        <div class="grid sm:grid-cols-2 gap-5 mb-5">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" placeholder="you@example.com">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Service Required</label>
-                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm text-gray-600">
-                                    <option value="">Select a service</option>
-                                    <option>Valve Inspection & Diagnostics</option>
-                                    <option>Valve Repair & Overhauling</option>
-                                    <option>Preventive Maintenance</option>
-                                    <option>Pressure Testing & Calibration</option>
-                                    <option>Valve Refurbishment</option>
-                                    <option>Pump & Gearbox Maintenance</option>
-                                    <option>Component Manufacturing</option>
-                                    <option>Emergency Support</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                            <textarea required rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm resize-none" placeholder="Tell us about your requirements..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 transition-all hover:scale-105 flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Map -->
-            <div class="mt-16 animate-on-scroll fade-up rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.5!2d74.53!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUxJzAwLjAiTiA3NMKwMzEnNDguMCJF!5e0!3m2!1sen!2sin!4v1"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Flow Control Valves Location"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
     <footer class="bg-dark pt-16 pb-8 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 20% 80%, rgba(26,143,209,0.5) 0%, transparent 50%);"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- Company -->
                 <div>
                     <div class="flex items-center gap-3 mb-5">
                         <div class="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
@@ -1128,180 +489,80 @@
                     </div>
                     <p class="text-gray-500 text-sm leading-relaxed mb-4">Sealing Success in Every Valve. Established 2021, delivering specialized valve maintenance solutions with precision and reliability.</p>
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent/30 transition-all">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent/30 transition-all">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent/30 transition-all">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-all">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent/30 transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent/30 transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent/30 transition-all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-all"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
                 <div>
                     <h4 class="text-white font-semibold mb-5">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Home</a></li>
-                        <li><a href="#about" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> About Us</a></li>
-                        <li><a href="#services" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Services</a></li>
-                        <li><a href="#products" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Products</a></li>
-                        <li><a href="#repair" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Repair Procedures</a></li>
-                        <li><a href="#contact" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Contact</a></li>
+                        <li><a href="index.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Home</a></li>
+                        <li><a href="about.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> About Us</a></li>
+                        <li><a href="services.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Services</a></li>
+                        <li><a href="products.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Valves</a></li>
+                        <li><a href="repair.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-accent"></i> Repair Procedures</a></li>
                     </ul>
                 </div>
-
-                <!-- Services -->
                 <div>
                     <h4 class="text-white font-semibold mb-5">Our Services</h4>
                     <ul class="space-y-3">
-                        <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Valve Repair &amp; Overhauling</li>
-                        <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Pump &amp; Gearbox Maintenance</li>
-                        <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Component Manufacturing</li>
-                        <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Rubber Moulding</li>
-                        <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Pressure Testing</li>
-                        <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Emergency Support</li>
+                        <li><a href="services.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Valve Repair &amp; Overhauling</a></li>
+                        <li><a href="pumps.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Pump &amp; Gearbox Maintenance</a></li>
+                        <li><a href="manufacturing.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Component Manufacturing</a></li>
+                        <li><a href="manufacturing.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Rubber Moulding</a></li>
+                        <li><a href="services.html" class="text-gray-500 hover:text-accent-light text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-accent text-xs"></i> Pressure Testing</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
                 <div>
                     <h4 class="text-white font-semibold mb-5">Contact Info</h4>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-accent mt-1"></i>
-                            <span class="text-gray-500 text-sm">Plot No. 90/A, Tiny Industrial Estate Udyambag, Belgaum - 590008</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-phone-alt text-accent"></i>
-                            <span class="text-gray-500 text-sm">+91 9538110661</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-accent"></i>
-                            <span class="text-gray-500 text-sm">flowcontrolvalves14@gmail.com</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-file-invoice text-accent"></i>
-                            <span class="text-gray-500 text-sm font-mono">GSTIN: 29GWWPS0591C1ZS</span>
-                        </li>
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-accent mt-1"></i><span class="text-gray-500 text-sm">Plot No. 90/A, Tiny Industrial Estate Udyambag, Belgaum - 590008</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-accent"></i><span class="text-gray-500 text-sm">+91 9538110661</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-accent"></i><span class="text-gray-500 text-sm">flowcontrolvalves14@gmail.com</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-file-invoice text-accent"></i><span class="text-gray-500 text-sm font-mono">GSTIN: 29GWWPS0591C1ZS</span></li>
                     </ul>
                 </div>
             </div>
-
-            <!-- Bottom -->
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                 <p class="text-gray-600 text-sm">&copy; 2025 Flow Control Valves. All rights reserved.</p>
                 <p class="text-gray-600 text-sm">Sealing Success in Every Valve</p>
             </div>
         </div>
     </footer>
-
-    <!-- ============ BACK TO TOP ============ -->
     <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-accent to-primary text-white rounded-full shadow-lg shadow-accent/30 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 hover:scale-110 hover:shadow-xl z-50">
         <i class="fas fa-arrow-up"></i>
     </button>
-
-    <!-- ============ WHATSAPP FLOAT ============ -->
-    <a href="https://wa.me/919538110661" target="_blank" rel="noopener noreferrer"
-       class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg shadow-green-500/30 flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all z-50 group">
+    <a href="https://wa.me/919538110661" target="_blank" rel="noopener noreferrer" class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg shadow-green-500/30 flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all z-50 group">
         <i class="fab fa-whatsapp text-2xl"></i>
         <span class="absolute left-full ml-3 bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">Chat with us!</span>
     </a>
-
-    <!-- ============ JAVASCRIPT ============ -->
     <script>
-        // ---- Navbar scroll effect ----
-        const navbar = document.getElementById('navbar');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 80) {
-                navbar.classList.add('bg-primary-dark/95', 'nav-blur', 'shadow-lg');
-                navbar.classList.remove('bg-transparent');
-            } else {
-                navbar.classList.remove('bg-primary-dark/95', 'nav-blur', 'shadow-lg');
-                navbar.classList.add('bg-transparent');
-            }
-
-            lastScroll = currentScroll;
-        });
-
-        // ---- Mobile menu toggle ----
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
-        let menuOpen = false;
-
         mobileMenuBtn.addEventListener('click', () => {
-            menuOpen = !menuOpen;
             mobileMenu.classList.toggle('hidden');
             menuIcon.classList.toggle('fa-bars');
             menuIcon.classList.toggle('fa-times');
         });
-
-        // Close mobile menu on link click
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 menuIcon.classList.add('fa-bars');
                 menuIcon.classList.remove('fa-times');
-                menuOpen = false;
             });
         });
-
-        // ---- Scroll animations (IntersectionObserver) ----
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // ---- Tabbed content (Pump procedures) ----
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-
-                // Remove active from all
-                tabBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.classList.add('bg-gray-100', 'text-gray-600');
-                });
-                tabContents.forEach(c => c.classList.remove('active'));
-
-                // Set active
-                btn.classList.add('active');
-                btn.classList.remove('bg-gray-100', 'text-gray-600');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-
-        // ---- Back to top button ----
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
         const backToTopBtn = document.getElementById('back-to-top');
-
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 500) {
+            if (window.pageYOffset > 300) {
                 backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
                 backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
             } else {
@@ -1309,85 +570,23 @@
                 backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
             }
         });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // ---- Contact form handler ----
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const btn = e.target.querySelector('button[type="submit"]');
-            const originalHTML = btn.innerHTML;
-
-            btn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent!';
-            btn.classList.add('bg-green-500');
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = originalHTML;
-                btn.classList.remove('bg-green-500');
-                btn.disabled = false;
-                e.target.reset();
-            }, 3000);
-        });
-
-        // ---- Counter animation ----
-        function animateCounter(elementId, target, suffix = '+') {
-            const el = document.getElementById(elementId);
-            if (!el) return;
-
-            let current = 0;
-            const increment = Math.ceil(target / 60);
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                el.textContent = current + suffix;
-            }, 30);
-        }
-
-        // Trigger counters when hero is visible
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter('counter-years', 5, '+');
-                    animateCounter('counter-clients', 500, '+');
-                    animateCounter('counter-projects', 1000, '+');
-                    heroObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-
-        heroObserver.observe(document.getElementById('home'));
-
-        // ---- Active nav link highlighting ----
-        const sections = document.querySelectorAll('section[id]');
-
-        window.addEventListener('scroll', () => {
-            const scrollY = window.pageYOffset + 100;
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('text-white', 'bg-white/10');
-                        link.classList.add('text-white/80');
-                    });
-                    const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-                    if (activeLink) {
-                        activeLink.classList.add('text-white', 'bg-white/10');
-                        activeLink.classList.remove('text-white/80');
-                    }
-                }
-            });
-        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     </script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 80) { navbar.classList.add('bg-primary-dark/95', 'nav-blur', 'shadow-lg'); }
+            else { navbar.classList.remove('bg-primary-dark/95', 'nav-blur', 'shadow-lg'); }
+        });
+        function animateCounter(id, target, suffix) {
+            const el = document.getElementById(id); if (!el) return;
+            let cur = 0; const inc = Math.ceil(target / 60);
+            const timer = setInterval(() => { cur += inc; if (cur >= target) { cur = target; clearInterval(timer); } el.textContent = cur + suffix; }, 30);
+        }
+        animateCounter('counter-years', 5, '+');
+        animateCounter('counter-clients', 500, '+');
+        animateCounter('counter-projects', 1000, '+');
+    </script>
+
 </body>
 </html>
