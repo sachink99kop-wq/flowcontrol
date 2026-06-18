@@ -36,6 +36,31 @@
     <p class="text-white/50 text-xs tracking-widest uppercase">Flow Control Valves</p>
 </div>
 
+<!-- ===== LANGUAGE SWITCHER ===== -->
+<div id="lang-switcher" class="fixed bottom-6 left-6 z-50">
+    <button id="lang-btn" onclick="toggleLangMenu()" class="w-14 h-14 bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-100 gap-0.5" title="Select Language">
+        <span class="text-xl leading-none">🌐</span>
+        <span class="text-[9px] font-bold text-gray-500 uppercase tracking-wide leading-none">Lang</span>
+    </button>
+    <div id="lang-menu" class="hidden absolute bottom-16 left-0 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden" style="min-width:190px">
+        <div class="px-4 py-2.5 border-b border-gray-100 bg-gray-50 flex items-center gap-2">
+            <span class="text-base">🌐</span>
+            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Select Language</span>
+        </div>
+        <div class="py-1.5">
+            <button onclick="changeLang('en')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm font-semibold text-dark"><span class="text-base">🇬🇧</span> English</button>
+            <button onclick="changeLang('id')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🇮🇩</span> Indonesia</button>
+            <button onclick="changeLang('pt')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🇧🇷</span> Brazil</button>
+            <button onclick="changeLang('fr')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🌍</span> Africa</button>
+            <button onclick="changeLang('ar')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🇦🇪</span> Dubai</button>
+            <button onclick="changeLang('ru')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🇷🇺</span> Russia</button>
+            <button onclick="changeLang('th')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🇹🇭</span> Thailand</button>
+            <button onclick="changeLang('de')"  class="lang-opt w-full flex items-center gap-3 px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700"><span class="text-base">🇩🇪</span> Germany</button>
+        </div>
+    </div>
+</div>
+<div id="google_translate_element" style="display:none"></div>
+
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-primary-dark/95 nav-blur shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -236,5 +261,40 @@
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
     </script>
 
+<!-- Google Translate + Language Switcher JS -->
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'id,pt,fr,ar,ru,th,de', autoDisplay: false }, 'google_translate_element');
+}
+function toggleLangMenu() {
+    document.getElementById('lang-menu').classList.toggle('hidden');
+}
+function changeLang(lang) {
+    document.getElementById('lang-menu').classList.add('hidden');
+    if (lang === 'en') {
+        document.cookie = 'googtrans=; expires=' + new Date(0).toUTCString() + '; path=/';
+        document.cookie = 'googtrans=; expires=' + new Date(0).toUTCString() + '; path=/; domain=.' + location.hostname;
+        window.location.reload(true);
+        return;
+    }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
+    window.location.reload(true);
+}
+document.addEventListener('click', function(e) {
+    var sw = document.getElementById('lang-switcher');
+    if (sw && !sw.contains(e.target)) document.getElementById('lang-menu').classList.add('hidden');
+});
+(function highlightActive() {
+    var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+    var active = m ? m[1] : 'en';
+    document.querySelectorAll('.lang-opt').forEach(function(btn) {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').indexOf("'" + active + "'") !== -1) {
+            btn.classList.add('text-accent', 'bg-accent/5', 'font-semibold');
+        }
+    });
+})();
+</script>
 </body>
 </html>
