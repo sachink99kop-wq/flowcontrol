@@ -378,31 +378,54 @@ function googleTranslateElementInit() {
 function toggleLangMenu() {
     document.getElementById('lang-menu').classList.toggle('hidden');
 }
-function changeLang(lang) {
-    document.getElementById('lang-menu').classList.add('hidden');
+function setLangCookie(lang) {
     if (lang === 'en') {
         document.cookie = 'googtrans=; expires=' + new Date(0).toUTCString() + '; path=/';
         document.cookie = 'googtrans=; expires=' + new Date(0).toUTCString() + '; path=/; domain=.' + location.hostname;
-        window.location.reload(true);
+    } else {
+        document.cookie = 'googtrans=/en/' + lang + '; path=/';
+        document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
+    }
+}
+function applyTranslate(lang, attempt) {
+    attempt = attempt || 0;
+    var combo = document.querySelector('.goog-te-combo');
+    if (combo) {
+        combo.value = (lang === 'en') ? '' : lang;
+        combo.dispatchEvent(new Event('change'));
         return;
     }
-    document.cookie = 'googtrans=/en/' + lang + '; path=/';
-    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
-    window.location.reload(true);
+    if (attempt < 60) setTimeout(function () { applyTranslate(lang, attempt + 1); }, 100);
 }
-document.addEventListener('click', function(e) {
+function changeLang(lang) {
+    document.getElementById('lang-menu').classList.add('hidden');
+    setLangCookie(lang);
+    if (lang === 'en') {
+        // GT combo has no empty option to revert in place; reload restores original cleanly
+        window.location.reload();
+        return;
+    }
+    applyTranslate(lang);
+    highlightActive(lang);
+}
+function highlightActive(active) {
+    if (!active) {
+        var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+        active = m ? m[1] : 'en';
+    }
+    document.querySelectorAll('.lang-opt').forEach(function (btn) {
+        var oc = btn.getAttribute('onclick') || '';
+        var on = oc.indexOf("'" + active + "'") !== -1;
+        btn.classList.toggle('text-accent', on);
+        btn.classList.toggle('bg-accent/5', on);
+        btn.classList.toggle('font-semibold', on);
+    });
+}
+document.addEventListener('click', function (e) {
     var sw = document.getElementById('lang-switcher');
     if (sw && !sw.contains(e.target)) document.getElementById('lang-menu').classList.add('hidden');
 });
-(function highlightActive() {
-    var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-    var active = m ? m[1] : 'en';
-    document.querySelectorAll('.lang-opt').forEach(function(btn) {
-        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').indexOf("'" + active + "'") !== -1) {
-            btn.classList.add('text-accent', 'bg-accent/5', 'font-semibold');
-        }
-    });
-})();
+highlightActive();
 </script>
 </body>
 </html>
