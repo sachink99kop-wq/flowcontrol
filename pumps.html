@@ -96,6 +96,20 @@
                 <a href="pumps.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all nav-active">Pumps</a>
                 <a href="manufacturing.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Manufacturing</a>
                 <a href="contact.html" class="block mx-4 mt-3 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white text-center font-semibold rounded-full">Contact Us</a>
+            <!-- Mobile language switcher -->
+            <div class="mt-3 pt-3 border-t border-white/10">
+                <p class="px-4 pb-2 text-xs font-semibold text-white/40 uppercase tracking-wider flex items-center gap-2"><span class="text-sm">🌐</span> Select Language</p>
+                <div class="grid grid-cols-2 gap-1">
+                <button onclick="changeLang('en')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇬🇧</span> English</button>
+                <button onclick="changeLang('id')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇮🇩</span> Indonesia</button>
+                <button onclick="changeLang('pt')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇧🇷</span> Brazil</button>
+                <button onclick="changeLang('fr')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🌍</span> Africa</button>
+                <button onclick="changeLang('ar')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇦🇪</span> Dubai</button>
+                <button onclick="changeLang('ru')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇷🇺</span> Russia</button>
+                <button onclick="changeLang('th')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇹🇭</span> Thailand</button>
+                <button onclick="changeLang('de')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇩🇪</span> Germany</button>
+                </div>
+            </div>
             </div>
         </div>
     </nav>
@@ -446,6 +460,8 @@ function applyTranslate(lang, attempt) {
 }
 function changeLang(lang) {
     document.getElementById('lang-menu').classList.add('hidden');
+    var mm = document.getElementById('mobile-menu');
+    if (mm) mm.classList.add('hidden');
     setLangCookie(lang);
     if (lang === 'en') {
         // GT combo has no empty option to revert in place; reload restores original cleanly

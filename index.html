@@ -98,6 +98,20 @@
             <a href="pumps.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Pumps</a>
             <a href="manufacturing.html" class="mobile-nav-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all">Manufacturing</a>
             <a href="contact.html" class="block mx-4 mt-3 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white text-center font-semibold rounded-full">Contact Us</a>
+            <!-- Mobile language switcher -->
+            <div class="mt-3 pt-3 border-t border-white/10">
+                <p class="px-4 pb-2 text-xs font-semibold text-white/40 uppercase tracking-wider flex items-center gap-2"><span class="text-sm">🌐</span> Select Language</p>
+                <div class="grid grid-cols-2 gap-1">
+                <button onclick="changeLang('en')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇬🇧</span> English</button>
+                <button onclick="changeLang('id')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇮🇩</span> Indonesia</button>
+                <button onclick="changeLang('pt')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇧🇷</span> Brazil</button>
+                <button onclick="changeLang('fr')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🌍</span> Africa</button>
+                <button onclick="changeLang('ar')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇦🇪</span> Dubai</button>
+                <button onclick="changeLang('ru')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇷🇺</span> Russia</button>
+                <button onclick="changeLang('th')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇹🇭</span> Thailand</button>
+                <button onclick="changeLang('de')" class="lang-opt flex items-center gap-2 px-3 py-2.5 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all text-sm"><span class="text-base">🇩🇪</span> Germany</button>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -164,7 +178,7 @@
             </div>
 
             <!-- Right: valve image visual -->
-            <div class="hidden lg:flex justify-center items-center relative h-[480px]">
+            <div class="flex justify-center items-center relative h-[280px] sm:h-[380px] lg:h-[480px] mt-6 lg:mt-0">
                 <!-- Glow backdrop behind image -->
                 <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/20 rounded-3xl blur-2xl"></div>
                 <!-- Valve product image -->
@@ -172,23 +186,23 @@
                      class="relative z-10 w-full max-w-[560px] object-contain drop-shadow-2xl animate-on-scroll fade-up"
                      style="filter: drop-shadow(0 20px 60px rgba(26,143,209,0.35)); animation: heroEntrance 1s ease-out both;">
                 <!-- Floating badges -->
-                <div class="absolute top-6 right-6 card-glass rounded-2xl p-4 float-anim text-center min-w-[80px] z-20">
+                <div class="hidden lg:block absolute top-6 right-6 card-glass rounded-2xl p-4 float-anim text-center min-w-[80px] z-20">
                     <i class="fas fa-wrench text-2xl text-accent-light mb-1"></i>
                     <p class="text-white text-xs font-semibold">Repair</p>
                 </div>
-                <div class="absolute bottom-10 left-0 card-glass rounded-2xl p-4 float-anim-alt text-center min-w-[80px] z-20">
+                <div class="hidden lg:block absolute bottom-10 left-0 card-glass rounded-2xl p-4 float-anim-alt text-center min-w-[80px] z-20">
                     <i class="fas fa-industry text-2xl text-accent-light mb-1"></i>
                     <p class="text-white text-xs font-semibold">Manufacturing</p>
                 </div>
-                <div class="absolute top-1/2 -right-4 -translate-y-1/2 card-glass rounded-2xl p-4 float-anim-2 text-center min-w-[80px] z-20">
+                <div class="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 card-glass rounded-2xl p-4 float-anim-2 text-center min-w-[80px] z-20">
                     <i class="fas fa-tachometer-alt text-2xl text-accent-light mb-1"></i>
                     <p class="text-white text-xs font-semibold">Testing</p>
                 </div>
-                <div class="absolute bottom-6 right-16 bg-green-500/20 border border-green-500/30 backdrop-blur rounded-2xl p-4 float-anim-3 text-center min-w-[80px] z-20">
+                <div class="hidden lg:block absolute bottom-6 right-16 bg-green-500/20 border border-green-500/30 backdrop-blur rounded-2xl p-4 float-anim-3 text-center min-w-[80px] z-20">
                     <i class="fas fa-check-circle text-2xl text-green-400 mb-1"></i>
                     <p class="text-white text-xs font-semibold">Certified</p>
                 </div>
-                <div class="absolute top-1/3 left-0 card-glass rounded-2xl p-4 float-anim text-center min-w-[80px] z-20" style="animation-delay:1.5s;">
+                <div class="hidden lg:block absolute top-1/3 left-0 card-glass rounded-2xl p-4 float-anim text-center min-w-[80px] z-20" style="animation-delay:1.5s;">
                     <i class="fas fa-shield-alt text-2xl text-accent-light mb-1"></i>
                     <p class="text-white text-xs font-semibold">Safety</p>
                 </div>
@@ -779,6 +793,8 @@ function applyTranslate(lang, attempt) {
 }
 function changeLang(lang) {
     document.getElementById('lang-menu').classList.add('hidden');
+    var mm = document.getElementById('mobile-menu');
+    if (mm) mm.classList.add('hidden');
     setLangCookie(lang);
     if (lang === 'en') {
         // GT combo has no empty option to revert in place; reload restores original cleanly
